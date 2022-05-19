@@ -1,0 +1,7 @@
+{
+  "name": "splitme",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
