@@ -1,0 +1,8 @@
+<div class="home">
+  <ion-card>
+    <app-form (add)="onAdd($event)"></app-form>
+  </ion-card>
+  <app-friend-list [friends]="friends" (deleteFriend)="onDelete($event)" (editFriend)="onEdit($event)">
+  </app-friend-list>
+  <app-footer></app-footer>
+</div>

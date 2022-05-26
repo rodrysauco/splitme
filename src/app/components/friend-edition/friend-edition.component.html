@@ -1,0 +1,14 @@
+<div class="friend-edition">
+  <ion-header class="friend-edition__header">
+    <ion-toolbar>
+      <ion-title>Editar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="friend-edition__body">
+    <app-form
+      [friend]="friendToEdit"
+      [editionMode] = "true"
+      (add)="onAdd($event)"
+    ></app-form>
+  </div>
+</div>

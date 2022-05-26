@@ -1,0 +1,25 @@
+<ion-item class="friend">
+  <ion-label>
+    <div class="friend__data">
+      <div class="friend__contact">
+        <span class="friend__name">{{friend.nombre | formatString}}</span>
+        <span class="friend__description">{{friend.descripcion | formatString}}</span>
+      </div>
+      <div class="friend__total">
+        <span class="friend__spent friend__spent--pone" *ngIf="friend.montoAPagar > 0">Pone {{friend.montoAPagar | currency}}</span>
+        <span class="friend__spent friend__spent--recibe" *ngIf="0 > friend.montoAPagar">Recibe {{friend.montoAPagar *-1 | currency}}</span>
+      </div>
+    </div>
+    <div class="friend__bottom">
+      <span class="friend__spent">Gastó {{friend.monto | currency}}</span>
+      <div class="friend__actions">
+        <ion-button fill="clear" size="small" shape="round" (click)="editMe()">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" size="small" shape="round" (click)="deleteMe()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </ion-label>
+</ion-item>
