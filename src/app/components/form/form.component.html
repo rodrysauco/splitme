@@ -1,0 +1,21 @@
+<div class="form">
+  <form #myForm="ngForm" [formGroup]="friendForm" (ngSubmit)="onSubmit(); myForm.resetForm()">
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text"  formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Monto</ion-label>
+      <ion-input type="number" inputmode="numeric"  min="0" formControlName="monto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="¿Qué compró?" formControlName="descripcion"></ion-input>
+    </ion-item>
+    <div class="form__actions">
+      <ion-button type="reset" size="medium" color="secondary" fill="clear">Limpiar</ion-button>
+      <ion-button type="submit" size="medium" fill="solid" color="primary" [disabled]="friendForm.invalid">
+        {{editionMode?
+        'Modificar': 'Agregar'}}</ion-button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,51 @@
+.friend {
+  display: flex;
+  flex-direction: column;
+
+  &__data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__spent {
+    font-weight: 500;
+
+    &--pone {
+      color: red;
+    }
+
+    &--recibe {
+      color: green;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+  }
+}
